@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+VENV/
+
+# 
+data/*
+runs/*
+
+# Trained model
+*.pth
+*.pt
+
+# Editor
+.vscode/*
+
+# Keep empty folder
+!.gitkeep
