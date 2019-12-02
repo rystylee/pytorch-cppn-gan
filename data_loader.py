@@ -14,18 +14,18 @@ def load_dataset(data_root, dataset_name, img_size, only_train=True, trans=None)
             train=True,
             download=True,
             transform=transforms.Compose([
-                # transforms.Resize((img_size, img_size)),
+                transforms.Resize((img_size, img_size)),
                 transforms.ToTensor(),
-                # transforms.Normalize((0.1307,), (0.3081,))
+                transforms.Normalize((0.5,), (0.5,)),
             ]))
         test_dataset = torchvision.datasets.MNIST(
             root=data_root,
             train=False,
             download=True,
             transform=transforms.Compose([
-                # transforms.Resize((img_size, img_size)),
+                transforms.Resize((img_size, img_size)),
                 transforms.ToTensor(),
-                # transforms.Normalize((0.1307,), (0.3081,))
+                transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
             ]))
     elif dataset_name == 'kmnist49':
         train_dataset = KMNIST49(
@@ -45,7 +45,7 @@ def load_dataset(data_root, dataset_name, img_size, only_train=True, trans=None)
             transform=transforms.Compose([
                 transforms.Resize((img_size, img_size)),
                 transforms.ToTensor(),
-                # transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
+                transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
                 ]),
             download=True
         )
@@ -55,7 +55,7 @@ def load_dataset(data_root, dataset_name, img_size, only_train=True, trans=None)
             transform=transforms.Compose([
                 transforms.Resize((img_size, img_size)),
                 transforms.ToTensor(),
-                # transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
+                transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
                 ]),
             download=True
         )
@@ -68,7 +68,6 @@ def load_dataset(data_root, dataset_name, img_size, only_train=True, trans=None)
             # root=os.path.join(data_root, dataset_name, 'train'),
             root=train_root,
             transform=transforms.Compose([
-                # transforms.Grayscale(),
                 transforms.Resize((img_size, img_size)),
                 transforms.ToTensor(),
                 transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
