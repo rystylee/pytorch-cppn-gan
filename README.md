@@ -11,10 +11,12 @@ An experiments with [Compositional Pattern Producing Networks](https://en.wikipe
 <img src="https://i.imgur.com/spGMrdi.jpg" width="25%" /><img src="https://i.imgur.com/hatGdob.jpg" width="25%" />
 
 ### cppn-dcgan
-
+#### trained on the [102 Category Flower Dataset](https://www.robots.ox.ac.uk/~vgg/data/flowers/102/)
+<img src="https://i.imgur.com/p1J6UD4.jpg" width="25%" />
 
 ### cppn-resnet
-
+#### trained on the [102 Category Flower Dataset](https://www.robots.ox.ac.uk/~vgg/data/flowers/102/)
+<img src="https://i.imgur.com/WjPHG2k.jpg" width="25%" /><img src="https://i.imgur.com/43sCChq.jpg" width="25%" />
 
 ## Reference
 * [hardmaru/cppn-gan-vae-tensorflow](https://github.com/hardmaru/cppn-gan-vae-tensorflow)  
