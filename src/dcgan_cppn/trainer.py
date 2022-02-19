@@ -93,7 +93,7 @@ class Trainer(object):
                     fake_img = self.generator(z, self.x, self.y, self.r)
                     fake_img = fake_img.view(-1, self.img_size, self.img_size, self.dim_c).permute((0, 3, 1, 2))
                 d_real = self.discriminator(real_img)
-                d_fake = self.discriminator(fake_img.detach())
+                d_fake = self.discriminator(fake_img).detach()
                 loss_d_real = self.criterion(d_real, 'd_real')
                 loss_d_fake = self.criterion(d_fake, 'd_fake')
                 loss_d = loss_d_real + loss_d_fake
